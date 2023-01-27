@@ -4,10 +4,15 @@ export abstract class View<T> {
   private escapar = false;
 
   constructor(seletor: string, escapar?: boolean) {
+    const elemento =  document.querySelector(seletor);
+    if (elemento) {
+      this.elemento = elemento as HTMLElement;
+    } else {
+      throw Error(`Seletro ${seletor} não exite no DOM. Verifique.`);
+    }
     if (escapar) {
       this.escapar = escapar;
     }
-    this.elemento = document.querySelector(seletor);
   }
 
   public update(model: T): void {

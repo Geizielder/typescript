@@ -1,10 +1,16 @@
 export class View {
     constructor(seletor, escapar) {
         this.escapar = false;
+        const elemento = document.querySelector(seletor);
+        if (elemento) {
+            this.elemento = elemento;
+        }
+        else {
+            throw Error(`Seletro ${seletor} não exite no DOM. Verifique.`);
+        }
         if (escapar) {
             this.escapar = escapar;
         }
-        this.elemento = document.querySelector(seletor);
     }
     update(model) {
         let template = this.template(model);
