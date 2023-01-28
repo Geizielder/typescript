@@ -34,7 +34,6 @@ export class NegociacaoController {
       this.negociacoes.adiciona(negociacao);
       this.limparFormulario();
       this.atualizaView();
-
    
   }
 
