@@ -18,8 +18,8 @@ export abstract class View<T> {
         }
     }
 
-    @inspact()
     @logarTempoDeExecucao(true)
+    @inspact()
     public update(model: T): void {
         let template = this.template(model);
         if (this.escapar) {
