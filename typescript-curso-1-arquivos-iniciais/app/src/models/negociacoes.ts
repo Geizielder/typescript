@@ -1,20 +1,13 @@
-import { Negociacao } from "./negociacao.js";
+import { Negociacao } from './negociacao.js';
 
 export class Negociacoes {
-  //pode ser usado generics nesse formato Array<Negociacao> 
-  private negociacoes: Negociacao[] = [];
+    private negociacoes: Negociacao[] = [];
 
-  public adiciona(negociacao: Negociacao) {
-    this.negociacoes.push(negociacao);
-  }
-  // pode ser usado nesse formato ReadonlyArray<Negociacao>
-  //O Readonly permite apenas a leitura do array impedindo que se faça alterações usando methods com pop ou push, por exemplo.
-  public lista(): readonly Negociacao[] {
-    return this.negociacoes;
-  }
+    public adiciona(negociacao: Negociacao) {
+        this.negociacoes.push(negociacao);
+    }
+
+    public lista(): readonly Negociacao[] {
+        return this.negociacoes;
+    }
 }
-
-const negociacoes = new Negociacoes();
-negociacoes.lista().forEach(n => {
-
-});
