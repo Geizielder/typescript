@@ -1,4 +1,4 @@
-import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execocao";
+import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao";
 
 export class Negociacao {
     constructor(

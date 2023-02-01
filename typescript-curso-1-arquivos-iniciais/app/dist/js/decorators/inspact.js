@@ -1,13 +1,11 @@
-export function inspact() {
-    return function (target, propertyKey, descriptor) {
-        const metodoOriginal = descriptor.value;
-        descriptor.value = function (...args) {
-            console.log(`----Método ${propertyKey}`);
-            console.log(`-------Parâmetros: ${JSON.stringify(args)}`);
-            const retorno = metodoOriginal.apply(this, args);
-            console.log(`----retorno: ${JSON.stringify(retorno)}`);
-            return retorno;
-        };
-        return descriptor;
+export function inspact(target, propertyKey, descriptor) {
+    const metodoOriginal = descriptor.value;
+    descriptor.value = function (...args) {
+        console.log(`----Método ${propertyKey}`);
+        console.log(`-------Parâmetros: ${JSON.stringify(args)}`);
+        const retorno = metodoOriginal.apply(this, args);
+        console.log(`----retorno: ${JSON.stringify(retorno)}`);
+        return retorno;
     };
+    return descriptor;
 }

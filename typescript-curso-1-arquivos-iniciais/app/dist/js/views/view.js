@@ -30,6 +30,6 @@ export class View {
     }
 }
 __decorate([
-    inspact(),
-    logarTempoDeExecucao(true)
+    logarTempoDeExecucao(true),
+    inspact
 ], View.prototype, "update", null);

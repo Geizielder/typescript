@@ -1,5 +1,4 @@
-export function inspact() {
-  return function(
+  export function inspact(
     target: any,
     propertyKey: string,
     descriptor: PropertyDescriptor
@@ -15,5 +14,5 @@ export function inspact() {
 
     return descriptor;
   }
-}
+
 
