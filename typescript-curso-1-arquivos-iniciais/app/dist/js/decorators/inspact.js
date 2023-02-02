@@ -9,3 +9,4 @@ export function inspact(target, propertyKey, descriptor) {
     };
     return descriptor;
 }
+//# sourceMappingURL=inspact.js.map
